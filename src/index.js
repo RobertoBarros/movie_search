@@ -2,9 +2,8 @@ const list = document.querySelector('#results');
 
 const insertMovies = (data) => {
   data.Search.forEach((result) => {
-    const movie = `<li>
-      <img src="${result.Poster}" alt="" />
-      <p>${result.Title}</p>
+    const movie = `<li class='list-inline-item mt-3'>
+      <img src="${result.Poster}" alt="" style="height: 200px; width: 135px;" />
     </li>`;
     list.insertAdjacentHTML('beforeend', movie);
   });
